@@ -12,7 +12,7 @@ async function apiFetch(endpoint, options = {}) {
   };
 
   try {
-    const res = await fetch(`${API_URL}${endpoint}`, { ...options, headers });
+    const res = await fetch(`${API_BASE}${endpoint}`, { ...options, headers });
 
     // Si la respuesta no es exitosa, lanza un error con mensaje claro
     if (!res.ok) {

@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const userPostsContainer = document.getElementById("userPosts");
 
   try {
-    // Traemos solo los posts del usuario logueado
-    const posts = await apiFetch("/posts/me");
+    // Asegúrate de usar la ruta completa según tu backend
+    const posts = await apiFetch("/api/v1/posts/me");
 
     if (!posts.length) {
       userPostsContainer.innerHTML = "<p>No tienes publicaciones aún 🍳</p>";
@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!confirm("¿Seguro quieres eliminar este post? 🗑️")) return;
 
         try {
-          await apiFetch(`/posts/${post._id}`, { method: "DELETE" });
-          card.remove(); // eliminar del DOM
+          await apiFetch(`/api/v1/posts/${post._id}`, { method: "DELETE" });
+          card.remove();
         } catch (err) {
           alert("Error al eliminar el post 😢");
           console.error(err);
@@ -46,4 +46,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     userPostsContainer.innerHTML = "<p>Error al cargar tus publicaciones 😢</p>";
   }
 });
+
 
