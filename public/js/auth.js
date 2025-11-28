@@ -1,5 +1,4 @@
-// auth.js - maneja login/register y token en localStorage
-const API_BASE = ""; 
+const API_BASE = "https://degustando-production.up.railway.app";
 
 async function apiFetchAuth(path, opts = {}) {
   if (window.apiFetch) return window.apiFetch(path, opts);
