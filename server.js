@@ -38,8 +38,9 @@ app.use("/api/v1/search", require("./routes/search"));
 
 
 // Iniciar servidor
-app.listen(process.env.PORT, () => {
-  console.log(`🚀 Servidor corriendo en http://localhost:${process.env.PORT}`);
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
   console.log(`📚 Swagger docs: http://localhost:${process.env.PORT}/api-docs`);
   console.log(`👥 Endpoint usuarios: http://localhost:${process.env.PORT}/api/v1/users`);
   console.log("🧭 CWD:", process.cwd());
