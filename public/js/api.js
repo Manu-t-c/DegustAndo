@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/v1";
+const API_URL = "https://degustando-production.up.railway.app";
 
 
 async function apiFetch(endpoint, options = {}) {
