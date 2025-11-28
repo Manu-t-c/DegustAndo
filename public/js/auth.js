@@ -1,4 +1,20 @@
-const API_BASE = "https://degustando-production.up.railway.app";
+// api.js
+window.API_BASE = "https://degustando-production.up.railway.app";
+
+export async function apiFetch(endpoint, options = {}) {
+  const token = localStorage.getItem("token");
+  const headers = {
+    "Content-Type": "application/json",
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    ...options.headers,
+  };
+  const res = await fetch(`${window.API_BASE}${endpoint}`, { ...options, headers });
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({}));
+    throw new Error(errorData.message || `Error ${res.status}`);
+  }
+  return res.json();
+}
 
 async function apiFetchAuth(path, opts = {}) {
   if (window.apiFetch) return window.apiFetch(path, opts);
