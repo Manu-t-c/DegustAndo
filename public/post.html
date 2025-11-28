@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Publicar - DegustAndo 🍽</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="feed-body">
+  <header class="navbar">
+    <div class="logo">🍽 DegustAndo</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="post.html" class="active">Publicar</a>
+      <a href="profile.html">Perfil</a>
+      <a href="login.html" id="navAuth">Ingresar</a>
+    </nav>
+  </header>
+
+  <main class="post-container">
+    <h2 class="page-title">Comparte tu opinión culinaria 🥣</h2>
+    <p class="subtitle">Describe tu plato y deja que la comunidad DegustAndo lo admire</p>
+
+    <div class="post-card form-card">
+      <form id="createPostForm" class="form">
+        <div class="input">
+          <label>Descripción</label>
+          <textarea id="description" rows="4" placeholder="¿Qué plato degustaste hoy?" required></textarea>
+        </div>
+
+        <div class="input">
+          <label>URL de la imagen</label>
+          <input id="image" placeholder="https://mi-plato-favorito.jpg" required />
+        </div>
+
+        <button class="btn-primary" type="submit">Publicar plato 🥙</button>
+      </form>
+    </div>
+
+    <div id="msg" class="small"></div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/post.js"></script>
+</body>
+</html>
+

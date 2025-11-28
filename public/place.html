@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DegustAndo 🍽 | Lugares</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="feed-body">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🍽 DegustAndo</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="post.html">Publicar</a>
+      <a href="profile.html">Perfil</a>
+      <a href="places.html" class="active">Lugares</a>
+      <a href="#" id="btnLogout">Salir</a>
+    </nav>
+  </header>
+
+  <main class="feed-container">
+    <h1 class="page-title">Lugares recomendados</h1>
+    <p class="subtitle">Descubre los mejores lugares para comer 🍴</p>
+
+    <section id="places-list" class="places-grid"></section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/places.js"></script>
+</body>
+</html>

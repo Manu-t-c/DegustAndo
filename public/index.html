@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DegustAndo 🍽 | Feed</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="feed-body">
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">🍽 DegustAndo</div>
+  <nav>
+    <a href="index.html" class="active">Inicio</a>
+    <a href="post.html">Publicar</a>
+    <a href="login.html" id="authLink">Ingresar</a>
+    <a href="place.html">Lugares</a>
+    <a href="#" id="btnLogout" style="display:none">Salir</a>
+  </nav>
+</header>
+  <!--Secccion Busqueda-->>
+<section id="search-section">
+  <h2>Buscar lugares y eventos</h2>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Escribe lo que buscas..."/>
+    <button id="btnSearch">Buscar</button>
+  </div>
+
+  <div id="searchResults" class="feed-grid"></div>
+</section>
+
+
+  <div id="searchResults" class="feed-grid"></div>
+</section>
+<main class="feed-container">
+  <h1 class="page-title">Explora los sabores del mundo</h1>
+  <p class="subtitle">Comparte, comenta y descubre los mejores platos de la comunidad</p>
+
+  <div id="searchResults" class="feed-grid"></div>
+</section>
+
+
+  <!-- Feed -->
+  <section id="feed" class="feed-grid"></section>
+
+  <!-- Seccion follow-->
+  <section id="follow-section">
+    <h2>Usuarios para seguir</h2>
+    <div id="users-list"></div>
+  </section>
+</main>
+  
+</main>
+
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/feed.js"></script>
+  <script src="js/follow.js"></script>
+  <script src="js/auth.js"></script> 
+
+</body>
+
+</html>
+

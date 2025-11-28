@@ -1,0 +1,66 @@
+openapi: 3.0.0
+info:
+  title: Tasterank API DegustAndo
+  description: Documentación de la API de usuarios con Swagger
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+paths:
+  /api/v1/users:
+    get:
+      summary: Obtener todos los usuarios
+      tags:
+        - Users
+      responses:
+        "200":
+          description: Lista de usuarios obtenida exitosamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+  /api/v1/users/{id}:
+    get:
+      summary: Obtener un usuario por ID
+      tags:
+        - Users
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Usuario encontrado
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "404":
+          description: Usuario no encontrado
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 68c38aa937b9e52949998146
+        username:
+          type: string
+          example: Alejandra
+        email:
+          type: string
+          example: alejandra@example.com
+        reputation:
+          type: integer
+          example: 100
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+

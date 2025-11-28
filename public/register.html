@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Registro - DegustAndo 🍽</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body class="auth-body register-bg">
+  <header class="navbar">
+    <div class="logo">🍽 DegustAndo</div>
+  </header>
+
+  <main class="auth-container">
+    <div class="auth-card">
+      <h2>Crea tu cuenta</h2>
+      <p class="small">Únete a la comunidad de los verdaderos foodies</p>
+
+      <div class="form">
+        <div class="input">
+          <label>Nombre de usuario</label>
+          <input id="username" placeholder="Tu nombre o apodo" />
+        </div>
+        <div class="input">
+          <label>Email</label>
+          <input id="regEmail" type="email" placeholder="tucorreo@ejemplo.com" />
+        </div>
+        <div class="input">
+          <label>Contraseña</label>
+          <input id="regPass" type="password" placeholder="••••••••" />
+        </div>
+
+        <button id="btnRegister" class="btn-primary">Crear cuenta</button>
+        <p class="small">
+          ¿Ya tienes cuenta?
+          <a href="login.html" class="accent-link">Inicia sesión</a>
+        </p>
+      </div>
+
+      <div id="regMsg" class="small"></div>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
+

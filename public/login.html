@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Iniciar sesión - DegustAndo 🍽️</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="auth-body">
+  <header class="navbar">
+    <div class="logo">🍽 DegustAndo</div>
+  </header>
+
+  <main class="auth-container">
+    <div class="auth-card">
+      <h2>Bienvenido a DegustAndo</h2>
+      <p class="small">Conecta con amantes de la buena comida</p>
+
+      <div class="form">
+        <div class="input">
+          <label>Email</label>
+          <input id="email" type="email" placeholder="tucorreo@ejemplo.com"/>
+        </div>
+        <div class="input">
+          <label>Contraseña</label>
+          <input id="password" type="password" placeholder="••••••••"/>
+        </div>
+        <button id="btnLogin" class="btn-primary">Iniciar sesión</button>
+        <p class="small">
+          ¿No tienes cuenta?
+          <a href="register.html" class="accent-link">Regístrate</a>
+        </p>
+      </div>
+
+      <div id="loginMsg" class="small"></div>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
+
